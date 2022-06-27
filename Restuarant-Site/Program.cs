@@ -4,6 +4,7 @@ using Restuarant_Site.Data.Repositories;
 using Restuarant_Site.Models;
 using Restuarant_Site.Services;
 using Restuarant_Site.Data;
+using Microsoft.Extensions.FileProviders;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
@@ -74,6 +75,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+/*
+
+app.UseFileServer(new FileServerOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Views")),
+    RequestPath = "/Views",
+    EnableDefaultFiles = true
+});
+*/
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

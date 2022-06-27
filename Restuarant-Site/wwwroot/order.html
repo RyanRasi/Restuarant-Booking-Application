@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 
-    <title>Gusto d'italia! - Checkout</title>
+    <title>Gusto d'italia! - Order</title>
 
     <!--Bootstrap Import-->
     <!-- CSS only -->
@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
 
     <!--Custom JS-->
-    <script src="../Public/JS/createBooking.js"></script>
+    <script src="../Public/JS/createOrder.js"></script>
     <script src="../Public/JS/Components/Navbar.js"></script>
     <script src="../Public/JS/Components/Header.js"></script>
     <!--Custom CSS-->
@@ -31,13 +31,28 @@
   from the DB
 ---------------------------------------------------------------------------------------->
 
-<body>
+<body onload="readOrderItems()">
 
     <!-- Navbar -->
     <component-navbar></component-navbar>
 
     <!-- Header -->
     <component-header></component-header>
+
+    <h2>Order some of our freshly prepared authentic meals delivered straight to your door!</h2>
+    <table id="orderList">
+        <tr>
+            <th>Item</th>
+            <th>Type</th>
+            <th>Calories</th>
+            <th>Price</th>
+            <th>Add to Cart</th>
+        </tr>
+
+    </table>
+    <form action="./checkout.html">
+        <button type="submit">Proceed to Checkout</button>
+    </form>
 
 </body>
 

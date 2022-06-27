@@ -59,3 +59,4 @@ C:\Users\ryan.rasi\source\repos\Training\Individual Project\Restuarant-Booking-A
 C:\Users\ryan.rasi\source\repos\Training\Individual Project\Restuarant-Booking-Application\Restuarant-Site\obj\Debug\net6.0\Restuarant-Site.pdb
 C:\Users\ryan.rasi\source\repos\Training\Individual Project\Restuarant-Booking-Application\Restuarant-Site\obj\Debug\net6.0\Restuarant-Site.genruntimeconfig.cache
 C:\Users\ryan.rasi\source\repos\Training\Individual Project\Restuarant-Booking-Application\Restuarant-Site\obj\Debug\net6.0\ref\Restuarant-Site.dll
+C:\Users\ryan.rasi\source\repos\Training\Individual Project\Restuarant-Booking-Application\Restuarant-Site\bin\Debug\net6.0\Restuarant-Site.staticwebassets.runtime.json

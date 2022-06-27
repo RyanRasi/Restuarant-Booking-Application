@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 
-    <title>Gusto d'italia! - Home</title>
+    <title>Gusto d'italia! - Checkout</title>
 
     <!--Bootstrap Import-->
     <!-- CSS only -->
@@ -16,7 +16,8 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-    <!--Custom JS--->
+    <!--Custom JS-->
+    <script src="../Public/JS/getOrder.js"></script>
     <script src="../Public/JS/Components/Navbar.js"></script>
     <script src="../Public/JS/Components/Header.js"></script>
     <!--Custom CSS-->
@@ -30,13 +31,48 @@
   from the DB
 ---------------------------------------------------------------------------------------->
 
-<body>
+<body onload="readProductCookies()">
 
     <!-- Navbar -->
     <component-navbar></component-navbar>
 
     <!-- Header -->
     <component-header></component-header>
+
+    <h2>Checkout Page!</h2>
+    <table id="checkoutList">
+        <tr>
+            <th>Item</th>
+            <th>Type</th>
+            <th>Calories</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+
+    </table>
+    <h4 id="priceDescription"></h4>
+    <h3 id="subtotalValue"></h3>
+    
+    <div class="container">
+        <form action="javascript:checkVoucher()" style="margin-top: 10px">
+        <div class="row">
+            <div class="col">
+                <input type="text" id="voucher" class="form-control" name="voucher" placeholder="Enter Voucher Code">
+            </div>
+            <div class="col">
+                <button>
+                    Apply
+                </button>
+            </div>
+        </div>
+        </form>
+    </div>
+    <h5 id="deliveryFee"></h5>
+    <h3 id="totalValue"></h3>
+
+    <button>
+        Proceed to Checkout
+    </button>
 
 </body>
 

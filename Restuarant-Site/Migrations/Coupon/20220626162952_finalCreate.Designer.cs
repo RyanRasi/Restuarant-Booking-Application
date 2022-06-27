@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Restuarant_Site.Data;
 
@@ -10,9 +11,10 @@ using Restuarant_Site.Data;
 namespace Restuarant_Site.Migrations.Coupon
 {
     [DbContext(typeof(CouponContext))]
-    partial class CouponContextModelSnapshot : ModelSnapshot
+    [Migration("20220626162952_finalCreate")]
+    partial class finalCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

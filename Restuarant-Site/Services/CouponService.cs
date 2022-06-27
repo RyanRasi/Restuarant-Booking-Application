@@ -30,10 +30,9 @@ namespace Restuarant_Site.Services
         }
         public void Update(Coupon old, Coupon newT)
         {
-            old.Item = newT.Item;
+            old.Code = newT.Code;
             old.Type = newT.Type;
-            old.Calories = newT.Calories;
-            old.Price = newT.Price;
+            old.Discount = newT.Discount;
             old.Status = newT.Status;
             _couponRepository.Update(old);
             _couponRepository.Save();
