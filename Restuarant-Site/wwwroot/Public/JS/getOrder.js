@@ -16,7 +16,7 @@ let jsnData = [];
 let voucherType, voucherDiscount;
 let priceDescription = "";
 
-fetch('http://localhost:5023/coupon')
+fetch('/coupon')
     // get the JSON content from the response
     .then((response) => {
         if (!response.ok) {

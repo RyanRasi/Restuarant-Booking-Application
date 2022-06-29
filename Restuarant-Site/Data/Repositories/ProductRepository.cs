@@ -4,8 +4,8 @@ namespace Restuarant_Site.Data.Repositories
 {
     public class ProductRepository : ICrudRepository<Product, int>
     {
-        private readonly ProductContext _productContext;
-        public ProductRepository(ProductContext productContext)
+        private readonly RestaurantContext _productContext;
+        public ProductRepository(RestaurantContext productContext)
         {
             _productContext = productContext ?? throw new
             ArgumentNullException(nameof(productContext));

@@ -10,7 +10,7 @@ using Restuarant_Site.Data;
 
 namespace Restuarant_Site.Migrations
 {
-    [DbContext(typeof(BookingContext))]
+    [DbContext(typeof(RestaurantContext))]
     [Migration("20220523162817_initial2")]
     partial class initial2
     {

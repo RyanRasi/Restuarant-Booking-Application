@@ -4,8 +4,8 @@ namespace Restuarant_Site.Data.Repositories
 {
     public class IngredientRepository : ICrudRepository<Ingredient, int>
     {
-        private readonly IngredientContext _ingredientContext;
-        public IngredientRepository(IngredientContext ingredientContext)
+        private readonly RestaurantContext _ingredientContext;
+        public IngredientRepository(RestaurantContext ingredientContext)
         {
             _ingredientContext = ingredientContext ?? throw new
             ArgumentNullException(nameof(ingredientContext));

@@ -4,8 +4,8 @@ namespace Restuarant_Site.Data.Repositories
 {
     public class CouponRepository : ICrudRepository<Coupon, int>
     {
-        private readonly CouponContext _couponContext;
-        public CouponRepository(CouponContext couponContext)
+        private readonly RestaurantContext _couponContext;
+        public CouponRepository(RestaurantContext couponContext)
         {
             _couponContext = couponContext ?? throw new
             ArgumentNullException(nameof(couponContext));

@@ -9,7 +9,7 @@ using Restuarant_Site.Data;
 
 namespace Restuarant_Site.Migrations.Ingredient
 {
-    [DbContext(typeof(IngredientContext))]
+    [DbContext(typeof(RestaurantContext))]
     partial class IngredientContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -10,7 +10,7 @@ using Restuarant_Site.Data;
 
 namespace Restuarant_Site.Migrations.Ingredient
 {
-    [DbContext(typeof(IngredientContext))]
+    [DbContext(typeof(RestaurantContext))]
     [Migration("20220524155654_initialCreate")]
     partial class initialCreate
     {

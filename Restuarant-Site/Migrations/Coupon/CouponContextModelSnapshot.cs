@@ -9,7 +9,7 @@ using Restuarant_Site.Data;
 
 namespace Restuarant_Site.Migrations.Coupon
 {
-    [DbContext(typeof(CouponContext))]
+    [DbContext(typeof(RestaurantContext))]
     partial class CouponContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>Gusto d'italia! - Checkout</title>
+
+    <!--Bootstrap Import-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!--Custom JS-->
+    <script src="../Public/JS/getOrder.js" defer></script>
+    <script src="../Public/JS/Components/Navbar.js"></script>
+    <script src="../Public/JS/Components/Header.js"></script>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../Public/CSS/styles.css">
+</head>
+
+
+<!---------------------------------------------------------------------------------------
+  A onload trigger is added to the body which will call the readTodoItems() function
+  which will in turn send a REST API GET request to the microservice to read the booking_list
+  from the DB
+---------------------------------------------------------------------------------------->
+
+<body onload="readProductCookies()">
+
+    <!-- Navbar -->
+    <component-navbar></component-navbar>
+
+    <!-- Header -->
+    <component-header></component-header>
+
+    <h2>Checkout Page!</h2>
+    <table id="checkoutList">
+        <tr>
+            <th>Item</th>
+            <th>Type</th>
+            <th>Calories</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+
+    </table>
+    <h4 id="priceDescription"></h4>
+    <h3 id="subtotalValue"></h3>
+    
+    <div class="container">
+        <form action="javascript:checkVoucher()" style="margin-top: 10px">
+        <div class="row">
+            <div class="col">
+                <input type="text" id="voucher" class="form-control" name="voucher" placeholder="Enter Voucher Code">
+            </div>
+            <div class="col">
+                <button>
+                    Apply
+                </button>
+            </div>
+        </div>
+        </form>
+    </div>
+    <h5 id="deliveryFee"></h5>
+    <h3 id="totalValue"></h3>
+
+    <button>
+        Proceed to Checkout
+    </button>
+
+</body>
+
+</html>

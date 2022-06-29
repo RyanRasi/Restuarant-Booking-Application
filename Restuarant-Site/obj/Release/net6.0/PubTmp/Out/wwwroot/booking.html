@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>Gusto d'italia! - Booking</title>
+
+    <!--Bootstrap Import-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!--Custom JS-->
+    <script src="../Public/JS/createBooking.js"></script>
+    <script src="../Public/JS/Components/Navbar.js"></script>
+    <script src="../Public/JS/Components/Header.js"></script>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../Public/CSS/styles.css">
+</head>
+
+
+<!---------------------------------------------------------------------------------------
+  A onload trigger is added to the body which will call the readTodoItems() function
+  which will in turn send a REST API GET request to the microservice to read the booking_list
+  from the DB
+---------------------------------------------------------------------------------------->
+
+<body>
+
+    <!-- Navbar -->
+    <component-navbar></component-navbar>
+
+    <!-- Header -->
+    <component-header></component-header>
+
+    <div class="bookingForm">
+
+        <h2>Book a Table</h2>
+        <h2>Gusto d'italia! - London</h2>
+        <p>We look forward to welcoming you to Gusto d'italia!</p>
+
+        <div class="formContainer">
+            <form action="javascript:addNewBooking()" style="margin-top: 10px">
+                <div class="row">
+                    <div class="col">
+                        <select name="locations" id="locations" class="form-control" oninput="validateInputs()">
+                            <option value="" disabled selected>Select Preferred Location</option>
+                            <option value="terrace">Terrace</option>
+                            <option value="balcony">Balcony</option>
+                            <option value="indoor_table">Indoors (Table)</option>
+                            <option value="indoor_booth">Indoors (Booth)</option>
+                        </select>
+                    </div>
+
+    <div class="col">
+        <input class="form-control" type="datetime-local" id="booking-time"
+       name="booking-time" >
+    </div>
+</div>
+
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="fname" class="form-control" name="fname" placeholder="First Name"
+                            oninput="validateInputs()">
+                    </div>
+                    <div class="col">
+                        <input type="text" id="lname" class="form-control" name="lname" placeholder="Last Name"
+                            oninput="validateInputs()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="phonen" class="form-control" name="phonen" placeholder="Phone Number"
+                            oninput="validateInputs()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="number" id="party" class="form-control" name="party" placeholder="Number in Party"
+                            oninput="validateInputs()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="notes" class="form-control" name="notes" placeholder="Special Notes"
+                            oninput="validateInputs()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="info" class="form-control" name="info"
+                            placeholder="Allergy/Dietary Requirements" oninput="validateInputs()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input id="submitButton" type="submit" value="BOOK NOW">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -10,7 +10,7 @@ using Restuarant_Site.Data;
 
 namespace Restuarant_Site.Migrations.Coupon
 {
-    [DbContext(typeof(CouponContext))]
+    [DbContext(typeof(RestaurantContext))]
     [Migration("20220524160719_initialCreate")]
     partial class initialCreate
     {

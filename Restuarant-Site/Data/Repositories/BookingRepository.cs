@@ -4,8 +4,8 @@ namespace Restuarant_Site.Data.Repositories
 {
     public class BookingRepository : ICrudRepository<Booking, int>
     {
-        private readonly BookingContext _bookingContext;
-        public BookingRepository(BookingContext bookingContext)
+        private readonly RestaurantContext _bookingContext;
+        public BookingRepository(RestaurantContext bookingContext)
         {
             _bookingContext = bookingContext ?? throw new
             ArgumentNullException(nameof(bookingContext));

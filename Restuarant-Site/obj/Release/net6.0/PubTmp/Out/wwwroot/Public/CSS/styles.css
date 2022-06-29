@@ -1,0 +1,174 @@
+﻿@font-face{
+    font-family: "ShadowsIntoLight-Regular";
+    src: url("../Assets/Fonts/ShadowsIntoLight-Regular.ttf") format("truetype");
+  }
+body {
+    margin: 0;
+    font-family: 'ShadowsIntoLight-Regular', Fallback, sans-serif;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/*********************************************
+         * Header
+         ********************************************/
+.header {
+    background-color: black;
+    height: 155px;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+input {
+    margin: 0;
+    border: none;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+.addButton {
+    float: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .addButton:hover {
+        background-color: cornflowerblue;
+        color: white;
+    }
+
+label {
+    float: left;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/*********************************************
+         * Booking_ITEMS List
+         ********************************************/
+
+/* Remove margins and padding from the ul element (unordered lis)  so that the list is flushed with the
+           browser borders instead of leaving a gap */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+    /* Each li element with the ul will hold a booking_item */
+    ul li {
+        cursor: pointer;
+        padding: 12px;
+        list-style-type: none;
+        background: #eee;
+        font-size: 18px;
+    }
+
+        /* Set all odd list items to a different background colour (zebra-stripes) */
+        ul li:nth-child(odd) {
+            background: #f9f9f9;
+        }
+
+        /* Darker background-color on hover */
+        ul li:hover {
+            background: #ddd;
+        }
+
+        /* When clicked on, change the background colour and strike out text */
+        ul li.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
+
+/* CSS style to hide the "tick" symbol if an item status is not set to "DONE"
+           This is done in code - see the addTodoItemToDisplay() function where the element is classList.toggle() */
+.tickHidden {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    visibility: hidden;
+}
+
+/* When clicked on, also show the "tick" symbol.  Again this is done in code.
+           see the addTodoItemToDisplay() function  */
+.tickVisible {
+    visibility: visible;
+}
+
+.close {
+    padding-left: 5px;
+    padding-right: 5px;
+    float: right;
+}
+
+    /* This adds a hover selector to the close class. That is any elements attached to the close class with change to
+           a RED with WHITE background.  In this case, this will be the close "button" for each of the booking_item
+        */
+    .close:hover {
+        background-color: red;
+        color: white;
+    }
+
+/* CSS for Header
+
+/* Container holding the image and the text */
+
+.Container-Header {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+
+  .Container-Image {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+  /* Centered text */
+  .Centered-Text {
+    position: relative;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    text-shadow: 2px 2px black;
+}
+
+.row {
+    padding-bottom: 15px;
+}
+
+.bookingForm {
+    margin-top: 15px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
+}
+
+#submitButton {
+    width: 100%;
+}
+
+table {
+
+    text-align: center;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right:10vw;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(241, 241, 241);
+}
